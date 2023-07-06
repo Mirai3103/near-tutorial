@@ -1,0 +1,30 @@
+{
+  "name": "hello_near",
+  "version": "1.0.0",
+  "license": "(MIT AND Apache-2.0)",
+  "type": "module",
+  "scripts": {
+    "build": "./build.sh",
+    "deploy": "./deploy.sh",
+    "test": "echo use integration-tests",
+    "asbuild:debug": "asc assembly/index.ts --target debug",
+    "asbuild:release": "asc assembly/index.ts --target release",
+    "asbuild": "npm run asbuild:debug && npm run asbuild:release",
+    "start": "npx serve ."
+  },
+  "dependencies": {
+    "near-cli": "^3.4.2",
+    "near-sdk-js": "1.0.0"
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.27.5",
+    "ts-morph": "^16.0.0",
+    "typescript": "^4.7.4"
+  },
+  "exports": {
+    ".": {
+      "import": "./build/release.js",
+      "types": "./build/release.d.ts"
+    }
+  }
+}

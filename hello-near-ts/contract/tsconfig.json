@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "target": "es5",
+    "noEmit": true,
+  },
+  "exclude": [
+    "node_modules"
+  ]
+  ,
+  "include": [
+    "./**/*.ts"
+  ],
+}
